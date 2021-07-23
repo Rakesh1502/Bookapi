@@ -89,6 +89,14 @@ booky.get("/author/book/:isbn",(req,res) => {
     return res.json({authors: getSpecificAuthor});
 });
 
+/* 
+route                /author/book
+description         get all authors based on books
+access              PUBLIC
+parametre           isbn
+methods             GET
+*/
+
 
 
 booky.listen(3000, () => console.log("Hey server is running"));
