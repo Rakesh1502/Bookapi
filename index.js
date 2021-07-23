@@ -90,13 +90,33 @@ booky.get("/author/book/:isbn",(req,res) => {
 });
 
 /* 
-route                /author/book
-description         get all authors based on books
+route                /publication
+description         get all publications
+access              PUBLIC
+parametre           none
+methods             GET
+*/
+booky.get("/publication", (req,res) => {
+    return res.json({publications: database.publication});
+});
+
+/* 
+route                /publication/book/:isbn
+description         get all publications based on books
 access              PUBLIC
 parametre           isbn
 methods             GET
 */
 
+booky.get("/publication/book/:isbn", (req,res) => {
+    const getSpecificPublication = database.publication.filter((publication) => publication.books.includes(req.params.isbn));
 
+    if(getSpecificPublication.length===0){
+        return res.json({ error : `No Publication found for the book of ${req.params.isbn}`,
+    });
+    }
+
+    return res.json({publications: getSpecificPublication});
+});
 
 booky.listen(3000, () => console.log("Hey server is running"));
