@@ -23,6 +23,18 @@
 // to get list of books based on languages [task]🚀
 
 
+//POST
+//Add new book
+
+//PUT
+//update book title
+//update/add new author
+
+
+//DELETE
+//delete a book
+//delete an author
+
 
 // Authors
 // We need an api
@@ -33,6 +45,18 @@
 // to get list of authors based on books ✅
 
 
+//POST
+// add new author
+
+
+//PUT
+//update author name
+
+
+//DELETE
+//delete an author
+
+
 // Publications
 // we need an API
 
@@ -41,3 +65,14 @@
 // to get specific publication [task] 🚀
 // to get list of publication based on book [task] 🚀
 
+//POST
+//add new publications
+
+
+//PUT
+//update the publication name
+//update / add books to publications
+
+
+//DELETE
+//delete a book from publication
