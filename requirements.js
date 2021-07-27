@@ -76,3 +76,6 @@
 
 //DELETE
 //delete a book from publication
+
+
+//how the server serves the request
